@@ -31,6 +31,14 @@ namespace WebApp.Controllers
             return View();
         }
 
+        public IActionResult Contactus()
+        {
+            ViewData["Title"] = Configuration.GetValue<string>("Title");
+            ViewData["CustName"] = Configuration.GetValue<string>("CustomerName");
+
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

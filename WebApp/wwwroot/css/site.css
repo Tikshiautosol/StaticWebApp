@@ -21,8 +21,6 @@ body {
   margin-bottom: 60px;
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
+.body-content {
+    padding-top: 70px;
 }

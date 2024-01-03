@@ -20,3 +20,12 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+/WebApp/bin/Debug/net8.0
+/.vs
+/WebApp/obj/Debug/net8.0
+/WebApp/obj/Release/net8.0
+/WebApp/obj/project.assets.json
+/WebApp/obj/project.nuget.cache
+/WebApp/obj/WebApp.csproj.nuget.dgspec.json
+/WebApp/obj/WebApp.csproj.nuget.g.props
+/WebApp/obj/WebApp.csproj.nuget.g.targets
