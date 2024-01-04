@@ -18,9 +18,15 @@ namespace WebApp.Controllers
         public IActionResult Index()
         {
             ViewData["Title"] = Configuration.GetValue<string>("Title");
-            ViewData["CustName"] = Configuration.GetValue<string>("CustomerName");
-
-            return View();
+ViewData["CustName"] = Configuration.GetValue<string>("CustomerName");
+            if (Configuration.GetValue<string>("CustomerName").Equals("AutoMobile", StringComparison.CurrentCultureIgnoreCase))
+            {
+                return View("AutoMobile");
+            }
+            else
+            {
+                return View();
+            }
         }
 
         public IActionResult Privacy()
