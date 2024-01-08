@@ -6,7 +6,8 @@
 <html lang="en">
 <head>
   <!-- Theme Made By www.w3schools.com -->
-   <title>@ViewData["Title"]</title>
+   <title> @ViewData["Title"]</title>
+    <link rel="icon" type="image/x-icon" href="/Images/logo.PNG">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -24,7 +25,7 @@
   <div class="container">
             <div class="navbar-header" style="height: 80px">
                 <a class="navbar-brand" href="#myPage">
-                    <h1>@ViewData["CustName"]</h1>
+                    <h1> @ViewData["CustName"]</h1>
                 </a>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -35,11 +36,15 @@
     </div>
             <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-                    <li> <a href="#about" >About Us</a></li>
-                    <li><a href="#services" >Products</a></li>
-                    <li><a href="#portfolio" >Gallery</a></li>
+                    <li> <a href="#about" style="font-weight: 900;">About Us</a></li>
+                    <li><a href="#services" style="font-weight: 900;" >Products</a></li>
+                    <li><a href="#portfolio" style="font-weight: 900;" >Gallery</a></li>
  @*        <li><a href="#pricing">PRICING</a></li> *@
-                    <li><a href="#contact" >CONTACT US</a> <small><span class="glyphicon glyphicon-envelope"></span>info@abilityengg.com</small><small>| <span class="glyphicon glyphicon-earphone"></span> 1234567899</small></li>
+                    <li><a href="#contact" style="font-weight: 900;">Contact Us</a>
+                        <div id="ContactInfo">
+                            <small style="color: white; font-weight: bold;"><span class="glyphicon glyphicon-envelope"></span><a href="mailto:thudish@email.com" target="_blank"> info@test.com</a></small><small style="color: white; font-weight: bold;"> | <span class="glyphicon glyphicon-earphone"></span> 1234567899</small>
+                        </div>
+                    </li>
       </ul>
     </div>
   </div>
@@ -393,6 +398,18 @@ $(document).ready(function(){
     });
   });
 })
+
+        $(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 1) {
+                    // alert(1)
+                    $("#ContactInfo").hide();
+                } else {
+                    // alert(2)
+                    $("#ContactInfo").show();
+                }
+            });
+        });
 </script>
 
 </body>
